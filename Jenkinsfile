@@ -34,13 +34,13 @@ pipeline {
 		  }    
             steps {
 		  
-                echo 'Testing Project on the behalf of our lord & savior morgott'
+                echo 'Testing... '
             }
         }
 	stage('deploy') {
             steps {
-                echo 'Deploying Project'
-		echo "DEploying version ${params.VERSION}"
+                echo 'Deploying...'
+		echo "Version ${params.VERSION}"
             }
         }	    
    
@@ -50,11 +50,11 @@ pipeline {
 	
 	always {
 		   //this action will happen always regardless of the result of build   
-		   echo 'Post build condition running'
+		   echo 'Post: Build Running'
 		}
 	failure {
 		 //this action will happen only if the build has failed 
-		  echo 'Post Action if Build Failed'
+		  echo 'Post: Build Failed'
 			
 		}	
 	}
